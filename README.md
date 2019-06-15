@@ -14,7 +14,8 @@ docker run -it --rm -v ${PWD}:/opt/react \
  npm install --only=dev eslint
 ```
 
-Sûrement n'est pas nécessaire, mais comme ça ne fontionnait pas:
+Sûrement n'est pas nécessaire, mais comme ça ne fontionnait pas, en suivant:
+<https://timonweb.com/tutorials/how-to-enable-ecmascript-6-imports-in-nodejs/>
 
 ```bash
 npm install esm
@@ -24,3 +25,6 @@ npm install esm
  -u 1000 -w /opt/react node:11.15.0-stretch \
  node -r  esm index.js
  ```
+
+À regarder :
+ <https://medium.com/@timoxley/named-exports-as-the-default-export-api-670b1b554f65>

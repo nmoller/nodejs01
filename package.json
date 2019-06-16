@@ -7,7 +7,8 @@
     "test": "node -r esm test/test.js",
     "start": "node -r esm index.js",
     "ch02": "cat README.md | node -r esm test/test01.js ",
-    "ch0201": "node -r esm test/test02.js  -r README.md"
+    "ch0201": "node -r esm test/test02.js  -r README.md",
+    "ch03": "node -r esm test/test03.js"
   },
   "keywords": [],
   "author": "",

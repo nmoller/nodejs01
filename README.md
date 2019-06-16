@@ -28,3 +28,11 @@ npm install esm
 
 À regarder :
  <https://medium.com/@timoxley/named-exports-as-the-default-export-api-670b1b554f65>
+
+Pour tester:
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react -u 1000 -w /opt/react node:11.15.0-stretch node -r esm  test/test.js
+```
+
+Je vais faire une branche par example.

@@ -32,7 +32,7 @@ npm install esm
 Pour tester:
 
 ```bash
-docker run -it --rm -v ${PWD}:/opt/react -u 1000 -w /opt/react node:11.15.0-stretch node -r esm  test/test.js
+docker run -it --rm -v ${PWD}:/opt/react -u 1000 -w /opt/react node:11.15.0-stretch npm test
 ```
 
 Je vais faire une branche par example.

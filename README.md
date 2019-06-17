@@ -46,3 +46,13 @@ Je vais faire une branche par example.
  docker run -it --rm -v ${PWD}:/opt/react -u 1000 \
  -w /opt/react node:11.15.0-stretch  npm run ch02
 ```
+
+## Chapitre 3
+
+Ne pas oublier `npm install` :) .
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  \
+-u 1000 -w /opt/react node:11.15.0-stretch  \
+node -r  esm src/event/tech19.js
+```

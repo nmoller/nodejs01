@@ -29,8 +29,18 @@ musicPlayer.on('stop', function(track) {
     AudioDevice.stop();
 });
 
+function logger(track) {
+    console.log('Hmm:', track);
+}
+
+musicPlayer.on('play', logger);
+
 musicPlayer.emit('play', 'The testers - Baby test my fire');
+
 
 setTimeout(function() {
     musicPlayer.emit('stop');
+    //TODO: marqué deprecated
+    musicPlayer.removeListener('play', logger);
+    musicPlayer.emit('play', 'The testers - Baby test my fire');
 }, 1000);

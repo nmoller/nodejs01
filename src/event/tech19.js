@@ -40,7 +40,6 @@ musicPlayer.emit('play', 'The testers - Baby test my fire');
 
 setTimeout(function() {
     musicPlayer.emit('stop');
-    //TODO: marqué deprecated
     musicPlayer.removeListener('play', logger);
     musicPlayer.emit('play', 'The testers - Baby test my fire');
 }, 1000);

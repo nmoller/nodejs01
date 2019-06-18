@@ -62,3 +62,11 @@ Pour voir la doc:
 <https://nodejs.org/api/events.html#events_event_removelistener>
 
 et ce n'est pas marqué deprecated...
+
+## Chapitre 4
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
+-w /opt/react node:11.15.0-stretch  \
+node -r  esm src/stream/tech28.js
+```

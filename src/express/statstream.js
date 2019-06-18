@@ -7,7 +7,6 @@ import {inspect} from 'util';
  * @extends Writable
  */
 export class StatStream extends Readable {
-  
     /**
      * 
      * @param {*} size 

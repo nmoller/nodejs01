@@ -70,3 +70,22 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
 -w /opt/react node:11.15.0-stretch  \
 node -r  esm src/stream/tech28.js
 ```
+
+### Express examples
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
+-w /opt/react node:11.15.0-stretch  \
+npm install --save express
+
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 --name njsserv\
+--network host -w /opt/react node:11.15.0-stretch \
+ node -r  esm src/express/index.js
+```
+
+Dans navigateur `http://localhost:3000`. Pour finir,
+
+```bash
+# dans un autre terminal
+docker rm -f njsserv
+```

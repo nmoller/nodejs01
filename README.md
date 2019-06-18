@@ -89,3 +89,7 @@ Dans navigateur `http://localhost:3000`. Pour finir,
 # dans un autre terminal
 docker rm -f njsserv
 ```
+
+ES6:
+
+<https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906>

@@ -46,6 +46,10 @@ docker run -it --rm -v ${PWD}:/opt/react -u 1000 -w /opt/react node:11.15.0-stre
 
 Ce qui a été le plus difficile à comprendre c'était la manière d'utiliser les imports et ce qui était exporté dans chaque module.
 
+ES6:
+
+<https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906>
+
 ## Chapitre 2
 
 ```bash
@@ -95,10 +99,6 @@ Dans navigateur `http://localhost:3000`. Pour finir,
 # dans un autre terminal
 docker rm -f njsserv
 ```
-
-ES6:
-
-<https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906>
 
 ## Chapitre 5 - Streams
 

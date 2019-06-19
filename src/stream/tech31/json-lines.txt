@@ -1,0 +1,9 @@
+{"test01":[1, 2, 3], "test02": true, "test03": "all"}n
+{"test01":[0, 2, 3], "test02": true, "test03": "all"}n
+{"test01":[10, 20, 30], "test02": true, "test03": "all"}n
+{"test01":[-1, -2, -3], "test02": true, "test03": "all"}n
+{"test01":[-10, 2, 3], "test02": true, "test03": "all"}n
+{"test01":[1, -20, 3], "test02": true, "test03": "all"}n
+{"test01":[1, 2, -30], "test02": true, "test03": "all"}n
+{"test01":["a", "b", 3], "test02": true, "test03": "all"}n
+{"test01":["c", 2, 3], "test02": true, "test03": "all"}n

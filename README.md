@@ -93,3 +93,14 @@ docker rm -f njsserv
 ES6:
 
 <https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906>
+
+### Hériter d'un stream
+
+Technique 31:
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 --name njsserv \
+-w /opt/react node:11.15.0-stretch \
+node -r  esm src/stream/tech31/index.js
+```
+

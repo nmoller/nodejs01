@@ -23,7 +23,7 @@ export class JSONLineReader extends stream.Readable {
     }
 
     /**
-     * 
+     * @emits object json objet found in stream
      * @param {*} size 
      */
     _read(size) {

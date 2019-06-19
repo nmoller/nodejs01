@@ -1,5 +1,11 @@
 # Learning NodeJs
 
+Je lis le livre `Node.js in Practice` sur <https://safaribooksonline.com>.
+
+Ce dépôt contient l'implementation en ES6 du code. J'utilise un container pour rouler nodejs.
+
+## Chapitre 1
+
 ```bash
 docker run -it --rm -v ${PWD}:/opt/react \
 -u 1000 -w /opt/react node:11.15.0-stretch\
@@ -38,7 +44,7 @@ Pour tester:
 docker run -it --rm -v ${PWD}:/opt/react -u 1000 -w /opt/react node:11.15.0-stretch npm test
 ```
 
-Je vais faire une branche par example.
+Ce qui a été le plus difficile à comprendre c'était la manière d'utiliser les imports et ce qui était exporté dans chaque module.
 
 ## Chapitre 2
 
@@ -63,7 +69,7 @@ Pour voir la doc:
 
 et ce n'est pas marqué deprecated...
 
-## Chapitre 4
+## Chapitre 4 - EventEmitter
 
 ```bash
 docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
@@ -94,9 +100,16 @@ ES6:
 
 <https://medium.com/ecmascript-2015/es6-classes-and-inheritance-607804080906>
 
+## Chapitre 5 - Streams
+
+- Readable
+- Writable
+- Duplex
+- Transform
+
 ### Hériter d'un stream
 
-Technique 31:
+#### Technique 31
 
 ```bash
 docker run -it --rm -v ${PWD}:/opt/react  -u 1000 --name njsserv \
@@ -109,8 +122,9 @@ node -r  esm src/stream/tech31/index.js
 <https://dustinpfister.github.io/2018/08/18/nodejs-filesystem-create-read-stream/>
 
 Pour être en mesure de relancer la requête autant de fois qu'on veux sur express, il a fallu introduire la
-classe `rewindable`. Sinon, le stream finisait après la première lecture. Si lo'on fait la création du stream
-à l'intérieur du get.... ça ne fonctionne pas.
+classe `rewindable`. Sinon, le stream finisait après la première lecture.
+
+Si l'on fait la création du filestream à l'intérieur du get.... ça ne fonctionne pas.
 
 ```bash
 docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
@@ -118,9 +132,14 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
 node -r  esm src/stream/tech31/index2.js
 ```
 
-Dans la technique 34, je laisse les emit pour me souvenir comment je dois penser à `length`
+#### Technique 34
+
+Je laisse les emit pour me souvenir comment je dois penser à `length`. Ça aide au débogage.
 
 ```bash
-docker run -it --rm -v ${PWD}:/opt/react  -u 1000 --network host --name njsserv -w /opt/react node:11.15.0-stretch node -r  esm src/stream/tec
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
+--network host --name njsserv \
+-w /opt/react node:11.15.0-stretch \
+node -r  esm src/stream/tec
 h34/index.js
 ```

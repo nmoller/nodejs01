@@ -104,3 +104,14 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 --name njsserv \
 node -r  esm src/stream/tech31/index.js
 ```
 
+<https://nodejs.org/api/util.html#util_util_inspect_object_options>
+
+Pour être en mesure de relancer la requête autant de fois qu'on veux sur express, il a fallu introduire la
+classe `rewindable`. Sinon, le stream finisait après la première lecture. Si lo'on fait la création du stream
+à l'intérieur du get.... ça ne fonctionne pas.
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
+--network host --name njsserv -w /opt/react node:11.15.0-stretch \
+node -r  esm src/stream/tech31/index2.js
+```

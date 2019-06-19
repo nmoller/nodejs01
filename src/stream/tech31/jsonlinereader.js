@@ -14,7 +14,6 @@ export class JSONLineReader extends stream.Readable {
     constructor(source) {
         super();
         super._source = source;
-        super._foundLineEnd = false;
         super._buffer = '';
 
         source.on('readable', function(){
@@ -45,10 +44,11 @@ export class JSONLineReader extends stream.Readable {
                 result = JSON.parse(line);
                 this._buffer = this._buffer.slice(lineIndex + 1);
                 this.emit('object', result);
-                this.push(util.inspect(result));
+                this.push(util.inspect(JSON.stringify(result)));
             } else {
-                this._buffer = this._buffer.slice(1);
+                this._buffer = null;
+                this.push(null);
             }
-        }
+        }  
     }
 }

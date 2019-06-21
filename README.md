@@ -143,3 +143,12 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
 node -r  esm src/stream/tec
 h34/index.js
 ```
+
+#### Technique 39
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
+ --network host --name njsserv -w /opt/react \
+ node:11.15.0-stretch \
+ node -r  esm src/fs/tech39/index.js
+ ```

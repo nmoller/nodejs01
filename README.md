@@ -152,3 +152,5 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
  node:11.15.0-stretch \
  node -r  esm src/fs/tech39/index.js
  ```
+
+Voir <https://nodejs.org/api/errors.html#errors_errors> pour la propagation des erreurs.

@@ -154,3 +154,33 @@ docker run -it --rm -v ${PWD}:/opt/react  -u 1000 \
  ```
 
 Voir <https://nodejs.org/api/errors.html#errors_errors> pour la propagation des erreurs.
+
+#### Pause kubernetes
+
+La librairy officielle <https://github.com/kubernetes-client/javascript>.
+
+Si l'on passe l'utilisateur 1000... on obtient une erreur de permissions;
+
+```bash
+docker run -it --rm -v ${PWD}:/opt/react \
+-v ${HOME}/.kube:/root/.kube  \
+-v ${HOME}/.minikube:/home/nmoller/.minikube \
+--network host --name njsserv \
+-e KUBECONFIG=/root/.kube/config -w /opt/react node:11.15.0-stretch \
+ node -r esm src/k8s/index.js
+```
+
+On obtient la liste des noms des pods dans le ns:
+
+```bash
+cheddar-55cdc7bcc4-6d48d
+cheddar-55cdc7bcc4-k95lk
+stilton-5948f8889d-7whp5
+stilton-5948f8889d-nkr4t
+wensleydale-788869b958-5phrd
+wensleydale-788869b958-t2ksf
+```
+
+Voir: <https://github.com/nmoller/ingress-traefik>
+
+pour comprendre le pourquoi des noms des pods.
